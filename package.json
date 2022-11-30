@@ -1,0 +1,10 @@
+{
+    "name": "@millcityrunner/thrift",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "thrift": "git+ssh://git@github.com/millcityrunner/apache-thrift.git#millcityrunner",
+        "uuid": "^2.0.3"
+    }
+}
