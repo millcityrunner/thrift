@@ -45,6 +45,6 @@ struct Stadium {
     9: optional i64 field_material;
     10: optional common.Timestamp activation_ts;
     11: optional common.Timestamp deactivation_ts;
-    12: optional list<teams.TeamId> team_ids;
+    12: optional list<common.TeamId> team_ids;
     13: optional common.TeamId current_active_team_id;
 }

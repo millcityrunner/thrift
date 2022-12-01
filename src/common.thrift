@@ -1,28 +1,30 @@
-namespace cocoa ThriftCommon
-namespace java com.joinhonor.thrift.common
+namespace java com.millcityrunner.thrift.common
 namespace js common
-namespace py honorthrift.common
+namespace py millcityrunnerthrift.common
 
 
 
 ### Typedefs:
 typedef binary Uuid;
-typedef common.Uuid SeasonId;
-typedef common.Uuid ConferenceId;
-typedef common.Uuid DivisionId;
-typedef common.Uuid AccuracyTrackerId;
-typedef common.Uuid ContestId;
-typedef common.Uuid FranchiseId;
-typedef common.Uuid GameId;
-typedef common.Uuid GoldenWeightId;
-typedef common.Uuid InjuryReportId;
-typedef common.Uuid LineupId;
-typedef common.Uuid PlatformId;
-typedef common.Uuid PlayerId;
-typedef common.Uuid StadiumId;
-typedef common.Uuid TeamId;
-typedef common.Uuid WeatherReportId;
+typedef Uuid SeasonId;
+typedef Uuid ConferenceId;
+typedef Uuid DivisionId;
+typedef Uuid AccuracyTrackerId;
+typedef Uuid ContestId;
+typedef Uuid FranchiseId;
+typedef Uuid GameId;
+typedef Uuid GoldenWeightId;
+typedef Uuid InjuryReportId;
+typedef Uuid LineupId;
+typedef Uuid PlatformId;
+typedef Uuid PlayerId;
+typedef Uuid SportId;
+typedef Uuid StadiumId;
+typedef Uuid TeamId;
+typedef Uuid UserId;
+typedef Uuid WeatherReportId;
 
+typedef string Address;
 typedef Uuid LocationId;
 typedef i64 Timestamp;
 typedef string Timezone;  // IANA timezone string (e.g. "America/Los_Angeles")
@@ -145,7 +147,6 @@ enum ProfileFieldValueType {
 //   CP-related (incl. ATS applicant fields): 2125
 //   Internal: 9008
 // WHEN ADDING NEW VALUES:
-// see: https://wiki.honordev.com/wiki/Eng/Adding_profile_fields
 enum ProfileFieldType {
 
     // All Users
@@ -247,7 +248,6 @@ struct User {
     // The set of valid roles this user is in.
     3: optional set<Role> roles;
 
-    6: optional EmailVerifiedState email_verified;
 }
 
 // Next ID: 16
@@ -271,7 +271,7 @@ enum LocationType {
     OTHER_CARE = 14;
     // Where this client should be taken during an emergency. See recipient
     // profile fields EMERGENCY_PLAN and
-    // EMERGENCY_SHELTER_REQUIRES_TRANSPORT_FROM_HONOR for more information
+    // EMERGENCY_SHELTER_REQUIRES_TRANSPORT_FROM_millcityrunner for more information
     // about the shelter.
     EMERGENCY_SHELTER = 16;
 
@@ -306,17 +306,8 @@ struct Location {
     2: optional string name;
     3: optional Address address;
     4: optional bool is_primary;
-    5: optional ServiceArea service_area;
     6: optional Timezone timezone;
-    7: optional string access_instructions;
     8: optional string phone_number;
-    // Optional classifier for the type of place that this
-    // location represents.
-    9: optional LocationType location_type;
-    // Region details will only be populated if the Location
-    // is within our service area and is within a region.
-    10: optional PricingRegionId region_id;
-    11: optional string region_name;
 }
 
 struct Date {

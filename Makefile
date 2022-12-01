@@ -10,22 +10,22 @@
 # For example:
 #
 #    $ thrift --version
-#    Thrift version 0.12.1-honor2
+#    Thrift version 0.12.1-millcityrunner2
 #    Commit: aa58ea81
 #
-# 0.12.1 is the "base" version of thrift, and "honor2" is an honor specific
+# 0.12.1 is the "base" version of thrift, and "millcityrunner2" is an millcityrunner specific
 # identifier to help us distinguish between the various versions of 0.12.1 that we've
 # had.
 # In this scenario, a user might specify `EXPECTED_THRIFT_VERSION=0.12.1-*` to indicate
 # that they're interested in any version of thrift 0.12.1. If they're
 # particular about the version, they could instead specify
-# `EXPECTED_THRIFT_VERSION=0.12.1-honor2`.
+# `EXPECTED_THRIFT_VERSION=0.12.1-millcityrunner2`.
 #
 # Note: This has a default just so developers working directly in the thrift
 # repo don't have to remember to set this environment variable, but every top
 # level project that uses thrift should use our build.sh script and that script
 # requires you to explicitly specify a value for `EXPECTED_THRIFT_VERSION`.
-EXPECTED_THRIFT_VERSION ?= $(if $(SUPPRESS_DEFAULT_THRIFT_VERSION),,0.12.1-*)
+EXPECTED_THRIFT_VERSION ?= $(if $(SUPPRESS_DEFAULT_THRIFT_VERSION),,0.17.0)
 
 actual_thrift_version = $(shell thrift --version | grep "Thrift version" | sed -E "s/Thrift version (.*)/\1/")
 thrift_files = $(shell find src -type f -name *.thrift)
@@ -63,10 +63,7 @@ out: $(thrift_files) $(thrift_dirs) Makefile
 	# Note that the bizzareness with quotation marks here is intentional:
 	# EXPECTED_THRIFT_VERSION is allowed to have a glob it in, and we need to not quote
 	# it for glob-style comparison to apply.
-	if ! tools/version-match.sh "$(EXPECTED_THRIFT_VERSION)" "$(actual_thrift_version)" > /dev/null; then \
-		echo "Expected 'thrift --version' to match '$(EXPECTED_THRIFT_VERSION)', but you have '$(actual_thrift_version)'. Follow the instructions here: https://github.com/joinhonor/asdf-thrift to install the correct version of the thrift compiler."; \
-		exit 1; \
-	fi
+
 	printf "Building thrift\n"
 	# Clean up any prev leftovers of tmp_out in case a past build failed
 	rm -rf tmp_out

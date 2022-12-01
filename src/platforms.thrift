@@ -25,7 +25,7 @@ enum PlatformTypes {
 // structs
 struct Platform {
     1: optional common.PlatformId id;
-    2: optional PlatformType type;
+    2: optional PlatformTypes type;
     3: optional PlatformStatus status;
     4: optional common.Timestamp created_ts;
     5: optional common.Timestamp updated_ts;

@@ -24,10 +24,3 @@ enum InjurySeverity {
 }
 
 // structs
-struct InjuryReport {
-    1: optional common.LineupId id;
-    2: optional LineupStatus status;
-    3: optional common.PlatformId platform_id;
-    4: optional common.Timestamp created_ts;
-    5: optional common.Timestamp updated_ts;
-}

@@ -25,9 +25,9 @@ struct Player {
     8: optional i64 height_inches;
     9: optional i64 weight_pounds;
     10: optional common.Gender gender;
-    11: optional common.Position primary_position;
-    12: optional common.Position secondary_position;
-    13: optional common.Position third_position;
+    11: optional common.Positions primary_position;
+    12: optional common.Positions secondary_position;
+    13: optional common.Positions third_position;
     // do we add a depth chart thrift file?
     // use case: CB1 vs. CB3 vs. Bench Player
 }
