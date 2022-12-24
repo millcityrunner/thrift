@@ -1,3 +1,8 @@
+namespace js seasons
+namespace py millcityrunnerthrift.seasons
+
+include "common.thrift"
+
 struct HelloWorldResponse {}
 
 service HelloWorldService {
