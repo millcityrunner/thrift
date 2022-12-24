@@ -159,6 +159,14 @@ enum ProfileFieldType {
 // Next ID: 1041
 enum ProfileSubFieldType {}
 
+enum ClientType {
+    WEB_BROWSER = 0,
+    IOS_NATIVE = 1,
+    ANDROID_NATIVE = 2,
+    COMMAND_LINE_TOOL = 3,
+    ANDROID_WEB_WRAPPER = 4,
+}
+
 // The available types of ProfileSubFields
 // Next id: 27
 enum MedicalConditions {
