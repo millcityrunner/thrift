@@ -3,7 +3,9 @@ namespace py millcityrunnerthrift.hello_world
 
 include "common.thrift"
 
-struct HelloWorldResponse {}
+struct HelloWorldResponse {
+    1: optional string hello;
+}
 
 service HelloWorldService {
     HelloWorldResponse hello_world() throws (
