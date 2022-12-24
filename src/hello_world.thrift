@@ -1,5 +1,5 @@
-namespace js seasons
-namespace py millcityrunnerthrift.seasons
+namespace js hello_world
+namespace py millcityrunnerthrift.hello_world
 
 include "common.thrift"
 
