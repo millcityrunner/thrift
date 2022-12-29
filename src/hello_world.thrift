@@ -8,5 +8,5 @@ struct HelloWorldResponse {
 }
 
 service HelloWorldService {
-    HelloWorldResponse hello_world();
+    HelloWorldResponse get_hello_world();
 }
