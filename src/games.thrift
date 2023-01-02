@@ -28,3 +28,7 @@ struct Game {
     9: optional i64 loser_score;
     10: optional GameStatus status;
 }
+
+service HelloWorldService {
+    HelloWorldResponse get_hello_world();
+}

@@ -31,3 +31,12 @@ struct Player {
     // do we add a depth chart thrift file?
     // use case: CB1 vs. CB3 vs. Bench Player
 }
+
+struct PlayerResponse {
+    1: optional list<Player> players;
+}
+
+
+service PlayerService {
+    PlayerResponse get_players();
+}

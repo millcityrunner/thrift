@@ -21,3 +21,7 @@ struct Conference {
     4: optional list<common.Year> years_active;
     5: optional common.ConferenceId conference_id;
 }
+
+service HelloWorldService {
+    HelloWorldResponse get_hello_world();
+}

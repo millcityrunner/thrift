@@ -27,3 +27,11 @@ struct Team {
     9: optional common.FranchiseId franchise_id;
 }
 
+struct TeamResponse {
+    1: optional list<Team> teams;
+}
+
+
+service TeamService {
+    TeamResponse get_teams();
+}

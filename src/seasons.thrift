@@ -22,3 +22,12 @@ struct Season {
     5: optional common.Timestamp created_ts;
     6: optional common.Timestamp updated_ts;
 }
+
+struct SeasonResponse {
+    1: optional list<Season> seasons;
+}
+
+
+service SeasonService {
+    SeasonResponse get_seasons();
+}

@@ -30,3 +30,7 @@ struct Franchise {
     6: optional common.Timestamp updated_ts;
     7: optional common.SportId sport_id;
 }
+
+service HelloWorldService {
+    HelloWorldResponse get_hello_world();
+}

@@ -30,3 +30,12 @@ struct Platform {
     4: optional common.Timestamp created_ts;
     5: optional common.Timestamp updated_ts;
 }
+
+struct PlatformResponse {
+    1: optional list<Platform> platforms;
+}
+
+
+service PlatformService {
+    PlatformResponse get_platforms();
+}

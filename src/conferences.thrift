@@ -23,3 +23,7 @@ struct Conference {
     6: optional common.Timestamp created_ts;
     7: optional common.Timestamp updated_ts;
 }
+
+service HelloWorldService {
+    HelloWorldResponse get_hello_world();
+}

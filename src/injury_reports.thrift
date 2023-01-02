@@ -24,3 +24,15 @@ enum InjurySeverity {
 }
 
 // structs
+struct InjuryReport {
+    1: optional common.InjuryReportId;
+}
+
+struct InjuryReportResponse {
+    1: optional list<InjuryReport> injury_reports;
+}
+
+
+service InjuryReportService {
+    InjuryReportResponse get_injury_reports();
+}

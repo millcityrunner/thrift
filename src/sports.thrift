@@ -23,3 +23,12 @@ struct Sport {
     6: optional common.Timestamp created_ts;
     7: optional common.Timestamp updated_ts;
 }
+
+struct SportResponse {
+    1: optional list<Sport> sports;
+}
+
+
+service SportService {
+    SportResponse get_sports();
+}

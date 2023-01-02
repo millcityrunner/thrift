@@ -34,3 +34,7 @@ enum FanDuelEntryType {
     MULTIENTRY = 2,
     CAPPED = 3, // ex. Max 3 Entries allowed
 }
+
+service HelloWorldService {
+    HelloWorldResponse get_hello_world();
+}

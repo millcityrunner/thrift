@@ -48,3 +48,12 @@ struct Stadium {
     12: optional list<common.TeamId> team_ids;
     13: optional common.TeamId current_active_team_id;
 }
+
+struct StadiumResponse {
+    1: optional list<Stadium> stadiums;
+}
+
+
+service StadiumService {
+    StadiumResponse get_stadiums();
+}

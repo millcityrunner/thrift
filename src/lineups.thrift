@@ -22,3 +22,11 @@ struct Lineup {
     4: optional common.Timestamp created_ts;
     5: optional common.Timestamp updated_ts;
 }
+
+struct LineupResponse {
+    1: optional list<Lineup> lineups;
+}
+
+service LineupService {
+    LineupResponse get_lineups();
+}
