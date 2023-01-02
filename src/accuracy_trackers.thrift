@@ -5,7 +5,7 @@ include "common.thrift"
 
 
 struct AccuracyTracker {
-    1: optional common.AccuracyTrackerId;
+    1: optional common.AccuracyTrackerId id;
 }
 
 struct AccuracyTrackerResponse {

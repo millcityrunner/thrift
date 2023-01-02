@@ -35,6 +35,10 @@ enum FanDuelEntryType {
     CAPPED = 3, // ex. Max 3 Entries allowed
 }
 
-service HelloWorldService {
-    HelloWorldResponse get_hello_world();
+struct ContestResponse {
+    1: optional list<Contest> contests;
+}
+
+service ContestService {
+    ContestResponse get_contests();
 }

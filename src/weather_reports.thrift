@@ -4,7 +4,7 @@ namespace py millcityrunnerthrift.weather_reports
 include "common.thrift"
 
 struct WeatherReport {
-    1: optional common.WeatherReportId;
+    1: optional common.WeatherReportId id;
 }
 
 struct WeatherReportResponse {

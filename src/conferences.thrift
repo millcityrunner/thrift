@@ -24,6 +24,10 @@ struct Conference {
     7: optional common.Timestamp updated_ts;
 }
 
-service HelloWorldService {
-    HelloWorldResponse get_hello_world();
+struct ConferenceResponse {
+    1: optional list<Conference> conferences;
+}
+
+service ConferenceService {
+    ConferenceResponse get_conferences();
 }

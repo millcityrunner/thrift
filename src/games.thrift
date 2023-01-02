@@ -29,6 +29,10 @@ struct Game {
     10: optional GameStatus status;
 }
 
-service HelloWorldService {
-    HelloWorldResponse get_hello_world();
+struct GameResponse {
+    1: optional list<Game> games;
+}
+
+service GameService {
+    GameResponse get_games();
 }

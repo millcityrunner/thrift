@@ -25,7 +25,7 @@ enum InjurySeverity {
 
 // structs
 struct InjuryReport {
-    1: optional common.InjuryReportId;
+    1: optional common.InjuryReportId id;
 }
 
 struct InjuryReportResponse {

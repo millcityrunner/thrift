@@ -5,7 +5,7 @@ include "common.thrift"
 
 
 struct GoldenWeight {
-    1: optional common.GoldenWeightId;
+    1: optional common.GoldenWeightId id;
 }
 
 struct GoldenWeightResponse {

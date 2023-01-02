@@ -14,7 +14,7 @@ enum DivisionStatus {
 }
 
 // structs
-struct Conference {
+struct Division {
     1: optional common.DivisionId id;
     2: optional string name;
     3: optional DivisionStatus status;
@@ -22,6 +22,10 @@ struct Conference {
     5: optional common.ConferenceId conference_id;
 }
 
-service HelloWorldService {
-    HelloWorldResponse get_hello_world();
+struct DivisionResponse {
+    1: optional list<Division> divisions;
+}
+
+service DivisionService {
+    DivisionResponse get_divisions();
 }

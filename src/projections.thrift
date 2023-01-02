@@ -4,7 +4,7 @@ namespace py millcityrunnerthrift.projections
 include "common.thrift"
 
 struct Projection {
-    1: optional common.ProjectionId;
+    1: optional common.ProjectionId id;
 }
 
 struct ProjectionResponse {

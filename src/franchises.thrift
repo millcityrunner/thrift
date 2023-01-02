@@ -31,6 +31,10 @@ struct Franchise {
     7: optional common.SportId sport_id;
 }
 
-service HelloWorldService {
-    HelloWorldResponse get_hello_world();
+struct FranchiseResponse {
+    1: optional list<Franchise> franchises;
+}
+
+service FranchiseService {
+    FranchiseResponse get_franchises();
 }
