@@ -21,6 +21,7 @@ typedef Uuid PlayerId;
 typedef Uuid ProjectionId;
 typedef Uuid SportId;
 typedef Uuid StadiumId;
+typedef Uuid StatId;
 typedef Uuid TeamId;
 typedef Uuid UserId;
 typedef Uuid WeatherReportId;
