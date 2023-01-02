@@ -18,6 +18,7 @@ typedef Uuid InjuryReportId;
 typedef Uuid LineupId;
 typedef Uuid PlatformId;
 typedef Uuid PlayerId;
+typedef Uuid ProjectionId;
 typedef Uuid SportId;
 typedef Uuid StadiumId;
 typedef Uuid TeamId;
