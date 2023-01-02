@@ -35,6 +35,10 @@ enum FanDuelEntryType {
     CAPPED = 3, // ex. Max 3 Entries allowed
 }
 
+struct Contest {
+    1: optional common.ContestId id;
+}
+
 struct ContestResponse {
     1: optional list<Contest> contests;
 }
