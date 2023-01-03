@@ -8,10 +8,10 @@ struct WeatherReport {
 }
 
 struct WeatherReportResponse {
-    1: optional list<WeatherReport> wether_reports;
+    1: optional list<WeatherReport> weather_reports;
 }
 
 
 service WeatherReportService {
-    WeatherReportResponse get_wether_reports();
+    WeatherReportResponse get_weather_reports();
 }
