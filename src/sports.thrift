@@ -16,12 +16,12 @@ enum SportStatus {
 // structs
 struct Sport {
     1: optional common.SportId id,
-    2: optional int created_ts,
-    3: optional int updated_ts,
+    2: optional i32 created_ts,
+    3: optional i32 updated_ts,
     4: optional bool is_deleted,
     5: optional string name,
-    6: optional int founded_ts,
-    7: optional int terminated_ts,
+    6: optional i32 founded_ts,
+    7: optional i32 terminated_ts,
 }
 
 struct GetSportsResponse {
@@ -30,10 +30,10 @@ struct GetSportsResponse {
 
 struct CreateSportsResponse {
     1: optional string name,
-    2: optional int founded_ts,
-    3: optional int terminated_ts,
-    4: optional int created_ts,
-    5: optional int updated_ts,
+    2: optional i32 founded_ts,
+    3: optional i32 terminated_ts,
+    4: optional i32 created_ts,
+    5: optional i32 updated_ts,
     6: optional bool is_deleted,
 }
 
@@ -43,16 +43,16 @@ struct DeleteSportRequest {
 
 struct CreateSportsRequest {
     1: optional string name,
-    2: optional int founded_ts,
-    3: optional int terminated_ts,
+    2: optional i32 founded_ts,
+    3: optional i32 terminated_ts,
 }
 
 struct UpdateSportsRequest {
-    1: optional int updated_ts,
+    1: optional i32 updated_ts,
     2: optional bool is_deleted,
     3: optional string name,
-    4: optional int founded_ts,
-    5: optional int terminated_ts,
+    4: optional i32 founded_ts,
+    5: optional i32 terminated_ts,
 }
 
 service SportService {
