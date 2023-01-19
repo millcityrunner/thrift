@@ -75,6 +75,6 @@ service SportService {
         1: DeleteSportRequest request,
     ) throws (
         1: common.InvalidRequest invalid_request,
-        2: common.SportNotFound sport_not_found,
+        2: common.SportNotFoundError sport_not_found,
     );
 }
