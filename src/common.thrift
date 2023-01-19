@@ -430,6 +430,8 @@ exception NotCancelable {}
 // TODO(david): Replace InvalidUser with this error.
 exception UserNotFoundError {}
 
+exception SportNotFoundError {}
+
 // Thrown when we want to return a thrift error to the client, but are unable to be more specific
 // about the error type. This typically happens if we're brokering a call to a 3rd party API.
 exception UnknownError {
