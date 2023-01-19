@@ -29,12 +29,13 @@ struct GetSportsResponse {
 }
 
 struct CreateSportsResponse {
-    1: optional string name,
-    2: optional i32 founded_ts,
-    3: optional i32 terminated_ts,
-    4: optional i32 created_ts,
-    5: optional i32 updated_ts,
-    6: optional bool is_deleted,
+    1: optional common.SportId id,
+    2: optional string name,
+    3: optional i32 founded_ts,
+    4: optional i32 terminated_ts,
+    5: optional i32 created_ts,
+    6: optional i32 updated_ts,
+    7: optional bool is_deleted,
 }
 
 struct DeleteSportRequest {
