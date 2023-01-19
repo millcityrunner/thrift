@@ -56,7 +56,7 @@ struct UpdateSportsRequest {
 }
 
 service SportService {
-    SportResponse get_sports();
+    GetSportsResponse get_sports();
 
     CreateSportsResponse create_sport(
         1: CreateSportsRequest request,
