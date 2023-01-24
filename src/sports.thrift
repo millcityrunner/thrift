@@ -13,6 +13,25 @@ enum SportStatus {
     ON_STRIKE = 4
 }
 
+// Next ID: 16
+enum Sports {
+    BASEBALL = 1,
+    BASKETBALL = 2,
+    SOCCER = 3,
+    FOOTBALL = 4,
+    GOLF = 5,
+    TENNIS = 6,
+    VOLLEYBALL = 7,
+    NCAA_FOOTBALL = 8,
+    NCAA_MENS_BASKETBALL = 9,
+    NCAA_WOMENS_BASKETBALL = 10,
+    NCAA_VOLLEYBALL = 11,
+    NCAA_MENS_GOLF = 12,
+    NCAA_WOMENS_GOLF = 13,
+    HOCKEY = 14,
+    UFC = 15
+}
+
 // structs
 struct Sport {
     1: optional common.SportId id,
