@@ -212,6 +212,11 @@ enum OneTimeExperienceType {}
 // unrecognized exception well.
 struct Response {}
 
+struct Session {
+    1: optional UserId user_id;
+    3: optional binary session_key;
+}
+
 struct Coordinates {
     1: optional double latitude;
     2: optional double longitude;
