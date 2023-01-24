@@ -212,6 +212,14 @@ enum OneTimeExperienceType {}
 // unrecognized exception well.
 struct Response {}
 
+enum Comparator {
+    LESS_THAN = 1,
+    LESS_THAN_OR_EQUAL_TO = 2,
+    EQUAL_TO = 3,
+    GREATER_THAN_OR_EQUAL_TO = 4,
+    GREATER_THAN = 5,
+}
+
 struct Session {
     1: optional UserId user_id;
     3: optional binary session_key;
