@@ -273,6 +273,21 @@ struct User {
 
 }
 
+struct TimeSlot {
+    1: optional DayOfWeek day_of_week;
+    // Start time.
+    2: optional i16 hour;
+    3: optional i16 minute;
+    // In seconds.
+    4: optional i32 duration;
+    // IANA timezone string, e.g., "America/Los_Angeles"
+    // - When populating this struct client-side, it's preferred to leave this as null.
+    //   The server will generally fill this in with the timezone of the corresponding location.
+    // - When returning this struct from the server, timezone will be included
+    //   example: rendering appointments for many recipients in different timezones on one page
+    5: optional Timezone timezone;
+}
+
 // Next ID: 16
 enum LocationType {
     // Location of care.
