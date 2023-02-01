@@ -43,6 +43,15 @@ struct Sport {
     7: optional i32 terminated_ts,
 }
 
+struct GetSportsRequest {
+    2: optional i32 created_ts,
+    3: optional i32 updated_ts,
+    4: optional bool is_deleted,
+    5: optional i32 name,
+    6: optional i32 founded_ts,
+    7: optional i32 terminated_ts,
+}
+
 struct GetSportsResponse {
     1: optional list<Sport> sports,
 }
