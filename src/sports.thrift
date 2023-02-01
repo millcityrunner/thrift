@@ -73,6 +73,7 @@ struct UpdateSportsRequest {
     3: optional i32 name,
     4: optional i32 founded_ts,
     5: optional i32 terminated_ts,
+    6: optional common.SportId sport_id,
 }
 
 service SportService {
