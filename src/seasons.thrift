@@ -53,7 +53,7 @@ struct GetSeasonsResponse {
     1: optional list<Season> seasons;
 }
 
-struct UpdateSeasonsRequest {
+struct UpdateSeasonRequest {
     1: optional common.SeasonId season_id;
     2: optional common.Timestamp created_ts;
     3: optional common.Timestamp updated_ts;
