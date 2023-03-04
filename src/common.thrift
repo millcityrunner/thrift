@@ -455,6 +455,8 @@ exception NotChangeable {}
 
 exception NotCancelable {}
 
+exception ResourceAlreadyExists {}
+
 // TODO(david): Replace InvalidUser with this error.
 exception UserNotFoundError {}
 
