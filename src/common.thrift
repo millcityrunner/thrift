@@ -458,6 +458,8 @@ exception NotCancelable {}
 // TODO(david): Replace InvalidUser with this error.
 exception UserNotFoundError {}
 
+exception SeasonNotFoundError {}
+
 exception SportNotFoundError {}
 
 // Thrown when we want to return a thrift error to the client, but are unable to be more specific

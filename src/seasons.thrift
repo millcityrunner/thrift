@@ -6,12 +6,6 @@ include "common.thrift"
 // typedefs
 
 // enums
-enum SeasonStatus {
-    ACTIVE = 1,
-    INACTIVE = 2,
-    NOT_STARTED = 3,
-    CANCELED = 4,
-}
 
 // structs
 struct Season {
@@ -77,26 +71,25 @@ service SeasonService {
     GetSeasonsResponse get_seasons(
         1: GetSeasonsRequest request
     ) throws (
-        1: common.NotFound not_found,
-        2: common.InvalidRequest invalid_request,
+        1: common.InvalidRequest invalid_request,
     );
 
     CreateSeasonResponse create_season(
         1: CreateSeasonRequest request
     ) throws (
         1: common.ResourceAlreadyExists resource_already_exists,
-        2: common.NotFound not_found,
+        2: common.SeasonNotFoundError not_found,
     );
 
     common.Response update_season(
         1: UpdateSeasonRequest request
     ) throws (
-        1: common.NotFound not_found;
+        1: common.SeasonNotFoundError not_found;
     );
 
     common.Response delete_season(
         1: DeleteSeasonRequest request
     ) throws (
-        1: common.NotFound not_found,
+        1: common.SeasonNotFoundError not_found,
     );
 }
