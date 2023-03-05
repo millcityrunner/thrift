@@ -29,7 +29,6 @@ struct CreateSeasonRequest {
     4: optional common.SportId sport_id;
     5: optional common.Timestamp end_ts;
     6: optional common.Timestamp updated_ts;
-    7: optional SeasonStatus status;
 }
 
 struct CreateSeasonResponse {
