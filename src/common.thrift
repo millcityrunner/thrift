@@ -61,6 +61,7 @@ enum Role {
     MANAGER = 3,
     AGENT = 4,
     OFFICIAL = 5,
+    ADMIN = 6,
 }
 
 enum Positions {
