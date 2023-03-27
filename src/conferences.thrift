@@ -74,7 +74,7 @@ struct UpdateConferencesRequest {
     8: optional Conferences name;
 }
 
-struct DeleteSeasonRequest {
+struct DeleteConferenceRequest {
     1: optional common.ConferenceId conference_id;
 }
 
