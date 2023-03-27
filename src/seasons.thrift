@@ -79,6 +79,7 @@ service SeasonService {
     ) throws (
         1: common.ResourceAlreadyExists resource_already_exists,
         2: common.SeasonNotFoundError not_found,
+        3: common.SportNotFoundError sport_not_found,
     );
 
     common.Response update_season(

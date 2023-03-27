@@ -465,6 +465,36 @@ exception SeasonNotFoundError {}
 
 exception SportNotFoundError {}
 
+exception ConferenceNotFoundError {}
+
+exception DivisionNotFoundError {}
+
+exception TeamNotFoundError {}
+
+exception PlayerNotFoundError {}
+
+exception GameNotFoundError {}
+
+exception FranchiseNotFoundError {}
+
+exception AccuracyTrackerNotFoundError {}
+
+exception ContestNotFoundError {}
+
+exception GoldenWeightNotFoundError {}
+
+exception InjuryReportNotFoundError {}
+
+exception LineupNotFoundError {}
+
+exception PlatformNotFoundError {}
+
+exception StadiumNotFoundError {}
+
+exception StatNotFoundError {}
+
+exception WeatherReportNotFoundError {}
+
 // Thrown when we want to return a thrift error to the client, but are unable to be more specific
 // about the error type. This typically happens if we're brokering a call to a 3rd party API.
 exception UnknownError {

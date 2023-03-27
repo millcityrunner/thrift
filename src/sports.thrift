@@ -48,7 +48,7 @@ struct GetSportsRequest {
     2: optional i32 created_ts,
     3: optional i32 updated_ts,
     4: optional bool is_deleted,
-    5: optional Sport name,
+    5: optional Sports name,
     6: optional i32 founded_ts,
     7: optional i32 terminated_ts,
     8: optional SportStatus status,
@@ -60,7 +60,7 @@ struct GetSportsResponse {
 
 struct CreateSportsResponse {
     1: optional common.SportId id,
-    2: optional Sport name,
+    2: optional Sports name,
     3: optional i32 founded_ts,
     4: optional i32 terminated_ts,
     5: optional i32 created_ts,
@@ -74,7 +74,7 @@ struct DeleteSportRequest {
 }
 
 struct CreateSportsRequest {
-    1: optional Sport name,
+    1: optional Sports name,
     2: optional i32 founded_ts,
     3: optional i32 terminated_ts,
     4: optional SportStatus status,
@@ -83,7 +83,7 @@ struct CreateSportsRequest {
 struct UpdateSportsRequest {
     1: optional i32 updated_ts,
     2: optional bool is_deleted,
-    3: optional Sport name,
+    3: optional Sports name,
     4: optional i32 founded_ts,
     5: optional i32 terminated_ts,
     6: optional common.SportId sport_id,
