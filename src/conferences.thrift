@@ -14,6 +14,8 @@ struct Conference {
     4: optional common.SeasonId season_id;
     5: optional common.Timestamp created_ts;
     6: optional common.Timestamp updated_ts;
+    7: optional common.Timestamp start_ts;
+    8: optional common.Timestamp end_ts;
 }
 
 struct ConferenceResponse {
