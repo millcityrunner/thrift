@@ -40,7 +40,7 @@ struct CreateConferenceRequest {
     7: optional Conferences name;
 }
 
-struct CreateSeasonResponse {
+struct CreateConferenceResponse {
     1: optional Conference conference;
 }
 
@@ -63,7 +63,7 @@ struct GetConferencesResponse {
     1: optional list<Conference> conferences;
 }
 
-struct UpdateConferenceRequest {
+struct UpdateConferencesRequest {
     1: optional common.ConferenceId conference_id;
     2: optional common.Timestamp created_ts;
     3: optional common.Timestamp updated_ts;
@@ -81,8 +81,8 @@ struct DeleteSeasonRequest {
 service ConferenceService {
     GetConferencesResponse get_conferences();
 
-    CreateConferencesResponse create_conference(
-        1: CreateConferencesRequest request,
+    CreateConferenceResponse create_conference(
+        1: CreateConferenceRequest request,
     ) throws (
         1: common.InvalidRequest invalid_request,
         2: common.AlreadyExists already_exists,
