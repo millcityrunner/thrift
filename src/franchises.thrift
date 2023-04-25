@@ -20,7 +20,7 @@ struct Franchise {
     1: optional common.FranchiseId id;
     2: optional common.Timestamp created_ts;
     3: optional common.TeamId root_team_id;
-    4: optional list<common.TeamId> teams;
+    4: optional common.TeamId team_id;
     5: optional bool is_active;
     6: optional common.Timestamp updated_ts;
     7: optional FranchiseStatus status;
@@ -35,7 +35,7 @@ struct CreateFranchiseRequest {
     2: optional common.Timestamp updated_ts;
     3: optional bool is_active;
     4: optional common.TeamId root_team_id;
-    5: optional list<common.TeamId> teams;
+    5: optional common.TeamId team_id;
     6: optional FranchiseStatus status;
 }
 
@@ -51,7 +51,7 @@ struct GetFranchisesRequest {
     5: optional common.Timestamp created_before_ts;
     6: optional common.Timestamp updated_before_ts;
     7: optional common.TeamId root_team_id;
-    8: optional list<common.TeamId> teams;
+    8: optional common.TeamId team_id;
     9: optional FranchiseStatus status;
 }
 
@@ -67,7 +67,7 @@ struct UpdateFranchisesRequest {
     5: optional common.Timestamp created_before_ts;
     6: optional common.Timestamp updated_before_ts;
     7: optional common.TeamId root_team_id;
-    8: optional list<common.TeamId> teams;
+    8: optional common.TeamId team_id;
     9: optional FranchiseStatus status;
 }
 
