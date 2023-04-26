@@ -485,6 +485,8 @@ exception GoldenWeightNotFoundError {}
 
 exception InjuryReportNotFoundError {}
 
+exception LocationNotFoundError {}
+
 exception LineupNotFoundError {}
 
 exception PlatformNotFoundError {}
