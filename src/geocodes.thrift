@@ -7,69 +7,69 @@ include "common.thrift"
 
 // enums
 enum States {
-    1: ALABAMA
-    2: ALASKA
-    3: ARIZONA
-    4: ARKANSAS
-    5: CALIFORNIA
-    6: COLORADO
-    7: CONNECTICUT
-    8: DELAWARE
-    9: FLORIDA
-    10: GEORGIA
-    11: HAWAII
-    12: IDAHO
-    13: ILLINOIS
-    14: INDIANA
-    15: IOWA
-    16: KANSAS
-    17: KENTUCKY
-    18: LOUISIANA
-    19: MAINE
-    20: MARYLAND
-    21: MASSACHUSETTS
-    22: MICHIGAN
-    23: MINNESOTA
-    24: MISSISSIPPI
-    25: MISSOURI
-    26: MONTANA
-    27: NEBRASKA
-    28: NEVADA
-    29: NEW_HAMPSHIRE
-    30: NEW_JERSEY
-    31: NEW_MEXICO
-    32: NEW_YORK
-    33: NORTH_CAROLINA
-    34: NORTH_DAKOTA
-    35: OHIO
-    36: OKLAHOMA
-    37: OREGON
-    38: PENNSYLVANIA
-    39: RHODE_ISLAND
-    40: SOUTH_CAROLINA
-    41: SOUTH_DAKOTA
-    42: TENNESSEE
-    43: TEXAS
-    44: UTAH
-    45: VERMONT
-    46: VIRGINIA
-    47: WASHINGTON
-    48: WEST_VIRGINIA
-    49: WISCONSIN
-    50: WYOMING
+    ALABAMA = 1,
+    ALASKA = 2,
+    ARIZONA = 3,
+    ARKANSAS = 4,
+    CALIFORNIA = 5,
+    COLORADO = 6,
+    CONNECTICUT = 7,
+    DELAWARE = 8,
+    FLORIDA = 9,
+    GEORGIA = 10,
+    HAWAII = 11,
+    IDAHO = 12,
+    ILLINOIS = 13,
+    INDIANA = 14,
+    IOWA = 15,
+    KANSAS = 16,
+    KENTUCKY = 17,
+    LOUISIANA = 18,
+    MAINE = 19,
+    MARYLAND = 20,
+    MASSACHUSETTS = 21,
+    MICHIGAN = 22,
+    MINNESOTA = 23,
+    MISSISSIPPI = 24,
+    MISSOURI = 25,
+    MONTANA = 26,
+    NEBRASKA = 27,
+    NEVADA = 28,
+    NEW_HAMPSHIRE = 29,
+    NEW_JERSEY = 30,
+    NEW_MEXICO = 31,
+    NEW_YORK = 32,
+    NORTH_CAROLINA = 33,
+    NORTH_DAKOTA = 34,
+    OHIO = 35,
+    OKLAHOMA = 36,
+    OREGON = 37,
+    PENNSYLVANIA = 38,
+    RHODE_ISLAND = 39,
+    SOUTH_CAROLINA = 40,
+    SOUTH_DAKOTA = 41,
+    TENNESSEE = 42,
+    TEXAS = 43,
+    UTAH = 44,
+    VERMONT = 45,
+    VIRGINIA = 46,
+    WASHINGTON = 47,
+    WEST_VIRGINIA = 48,
+    WISCONSIN = 49,
+    WYOMING =  50
 }
 
 enum Countries {
-    1: USA
+    USA = 1,
 }
 
 enum CountryCodes {
-    1: 1
+    USA = +1,
 }
 
 enum Timezones {
-    1: 'America/Chicago'
-    2: 'America/Los_Angeles'
+    CHICAGO = 1,
+    LOS_ANGELES = 2
 }
 
 // structs
@@ -77,7 +77,7 @@ struct Geocode {
     1: optional common.GeocodeId id;
     2: optional common.Timestamp created_ts;
     3: optional common.Timestamp updated_ts;
-    4: optional binary(16) location_id;
+    4: optional binary location_id;
     5: optional string city;
     6: optional States state;
     7: optional Countries country;

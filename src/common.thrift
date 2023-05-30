@@ -498,6 +498,8 @@ exception StatNotFoundError {}
 
 exception WeatherReportNotFoundError {}
 
+exception GeocodeNotFoundError {}
+
 // Thrown when we want to return a thrift error to the client, but are unable to be more specific
 // about the error type. This typically happens if we're brokering a call to a 3rd party API.
 exception UnknownError {
