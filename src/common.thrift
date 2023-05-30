@@ -12,6 +12,7 @@ typedef Uuid DivisionId;
 typedef Uuid AccuracyTrackerId;
 typedef Uuid ContestId;
 typedef Uuid FranchiseId;
+typedef Uuid GeocodeId;
 typedef Uuid GameId;
 typedef Uuid GoldenWeightId;
 typedef Uuid InjuryReportId;
